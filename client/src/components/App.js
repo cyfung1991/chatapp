@@ -9,7 +9,7 @@ import { SocketProvider } from '../contexts/SocketProvider';
 function App() {
   const [id, setId] = useLocalStorage('id')
   const dashboard = (
-    <SocketProvider>
+    <SocketProvider id={id}>
       <ContactsProvider>
         <ConversationsProvider id={id}>
           <Dashboard id={id} />
